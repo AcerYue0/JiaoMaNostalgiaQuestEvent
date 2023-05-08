@@ -1,0 +1,209 @@
+/* Reset some default styles to ensure consistency */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 960px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    height: max-content;
+}
+
+.row {
+    justify-content: center;
+    /* 將內容置中 */
+    width: fit-content;
+    /* 自適應寬度 */
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+main {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+.bingo-board {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 1fr;
+    justify-content: center;
+    /* 將內容置中 */
+    width: fit-content;
+    /* 自適應寬度 */
+}
+
+.task-details {
+    background-color: #fff;
+    padding: 20px;
+    margin-left: 20px;
+    width: 400px;
+    height: 512px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+section.active {
+    display: block !important;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    margin-bottom: 40px;
+    display: none;
+}
+
+button.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 50px;
+    cursor: pointer;
+    /* 添加游標指示詞 */
+    outline: none;
+    /* 移除按鈕點擊時的陰影效果 */
+}
+
+/* 新手組 */
+#newbie button.cell {
+    background-color: #91d18c;
+}
+
+#newbie button.cell:hover {
+    background-color: #609256;
+    /* 原始顏色的深色變化 */
+}
+
+#newbie button.cell:active {
+    background-color: #3c6a3e;
+    /* 原始顏色的深色變化 */
+}
+
+/* 一般組 */
+#regular button.cell {
+    background-color: #d1c78c;
+}
+
+#regular button.cell:hover {
+    background-color: #a78c5f;
+    /* 原始顏色的深色變化 */
+}
+
+#regular button.cell:active {
+    background-color: #725b3f;
+    /* 原始顏色的深色變化 */
+}
+
+/* 專家組 */
+#expert button.cell {
+    background-color: #d18c8c;
+}
+
+#expert button.cell:hover {
+    background-color: #a86c6c;
+    /* 原始顏色的深色變化 */
+}
+
+#expert button.cell:active {
+    background-color: #724949;
+    /* 原始顏色的深色變化 */
+}
+
+/* 宗師組 */
+#master button.cell {
+    background-color: #bb8cd1;
+}
+
+#master button.cell:hover {
+    background-color: #9d6da8;
+    /* 原始顏色的深色變化 */
+}
+
+#master button.cell:active {
+    background-color: #604170;
+    /* 原始顏色的深色變化 */
+}
+
+#cellContentFrame {
+    width: 400px;
+    height: 280px;
+    border: none;
+}
+
+#completeFrame {
+    width: 400px;
+    height: 80px;
+    border: none;
+}
+
+#task-title {
+    font-size: 35px;
+    height: 40px;
+    margin: 10px;
+}
+
+#task-complete {
+    font-size: 35px;
+    height: 40px;
+    margin: 10px;
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遊戲活動網頁</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 引入CSS樣式表 -->
+    <script>
+        // 當頁面載入完成後執行的函數
+        window.onload = function () {
+            // 獲取所有連結元素
+            var links = document.querySelectorAll('nav ul li a');
+
+            // 迭代每個連結
+            links.forEach(function (link) {
+                // 添加點擊事件監聽器
+                link.addEventListener('click', function (event) {
+                    event.preventDefault(); // 阻止默認行為
+
+                    var target = this.getAttribute('href'); // 獲取目標組別的id
+
+                    // 顯示目標組別的Bingo盤和任務，隱藏其他組別
+                    var sections = document.querySelectorAll('section');
+                    sections.forEach(function (section) {
+                        if (section.id === target) {
+                            section.classList.add('active');
+                        } else {
+                            section.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        };
+    </script>
+</head>
+
+<body>
+    <header>
+        <!-- 網頁標題、標語或導航欄等 -->
+        <h1>遊戲活動網頁</h1>
+    </header>
+
+    <main>
+        <nav>
+            <!-- 分頁元素 -->
+            <ul>
+                <li><a href="newbie" style="background-color: #91d18c">新手組</a></li>
+                <li><a href="regular" style="background-color: #d1c78c">一般組</a></li>
+                <li><a href="expert" style="background-color: #d18c8c">專家組</a></li>
+                <li><a href="master" style="background-color: #bb8cd1">宗師組</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <section id="newbie" class="active">
+                <!-- 新手組的任務列表 -->
+                <h2>新手組任務</h2>
+                <div class="bingo-board">
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">Q</button>
+                        <button onclick="showCellContent(this)" class="cell">P</button>
+                        <button onclick="showCellContent(this)" class="cell">O</button>
+                        <button onclick="showCellContent(this)" class="cell">N</button>
+                        <button onclick="showCellContent(this)" class="cell">M</button>
+                    </div>
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">R</button>
+                        <button onclick="showCellContent(this)" class="cell">E</button>
+                        <button onclick="showCellContent(this)" class="cell">D</button>
+                        <button onclick="showCellContent(this)" class="cell">C</button>
+                        <button onclick="showCellContent(this)" class="cell">L</button>
+                    </div>
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">S</button>
+                        <button onclick="showCellContent(this)" class="cell">F</button>
+                        <button onclick="showCellContent(this)" class="cell">A</button>
+                        <button onclick="showCellContent(this)" class="cell">B</button>
+                        <button onclick="showCellContent(this)" class="cell">K</button>
+                    </div>
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">T</button>
+                        <button onclick="showCellContent(this)" class="cell">G</button>
+                        <button onclick="showCellContent(this)" class="cell">H</button>
+                        <button onclick="showCellContent(this)" class="cell">I</button>
+                        <button onclick="showCellContent(this)" class="cell">J</button>
+                    </div>
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">U</button>
+                        <button onclick="showCellContent(this)" class="cell">V</button>
+                        <button onclick="showCellContent(this)" class="cell">W</button>
+                        <button onclick="showCellContent(this)" class="cell">X</button>
+                        <button onclick="showCellContent(this)" class="cell">Y</button>
+                    </div>
+                    <!-- 任務詳細內容顯示區域 -->
+                </div>
+            </section>
+
+
+            <section id="regular">
+                <!-- 一般組的任務列表 -->
+                <h2>一般組任務</h2>
+                <div class="bingo-board">
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">Q</button>
+                        <button onclick="showCellContent(this)" class="cell">P</button>
+                        <button onclick="showCellContent(this)" class="cell">O</button>
+                        <button onclick="showCellContent(this)" class="cell">N</button>
+                        <button onclick="showCellContent(this)" class="cell">M</button>
+                    </div>
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">R</button>
+                        <button onclick="showCellContent(this)" class="cell">E</button>
+                        <button onclick="showCellContent(this)" class="cell">D</button>
+                        <button onclick="showCellContent(this)" class="cell">C</button>
+                        <button onclick="showCellContent(this)" class="cell">L</button>
+                    </div>
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">S</button>
+                        <button onclick="showCellContent(this)" class="cell">F</button>
+                        <button onclick="showCellContent(this)" class="cell">A</button>
+                        <button onclick="showCellContent(this)" class="cell">B</button>
+                        <button onclick="showCellContent(this)" class="cell">K</button>
+                    </div>
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">T</button>
+                        <button onclick="showCellContent(this)" class="cell">G</button>
+                        <button onclick="showCellContent(this)" class="cell">H</button>
+                        <button onclick="showCellContent(this)" class="cell">I</button>
+                        <button onclick="showCellContent(this)" class="cell">J</button>
+                    </div>
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">U</button>
+                        <button onclick="showCellContent(this)" class="cell">V</button>
+                        <button onclick="showCellContent(this)" class="cell">W</button>
+                        <button onclick="showCellContent(this)" class="cell">X</button>
+                        <button onclick="showCellContent(this)" class="cell">Y</button>
+                    </div>
+                    <!-- 任務詳細內容顯示區域 -->
+                </div>
+            </section>
+
+            <section id="expert">
+                <!-- 專家組的任務列表 -->
+                <h2>專家組任務</h2>
+                <div class="bingo-board">
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">Q</button>
+                        <button onclick="showCellContent(this)" class="cell">P</button>
+                        <button onclick="showCellContent(this)" class="cell">O</button>
+                        <button onclick="showCellContent(this)" class="cell">N</button>
+                        <button onclick="showCellContent(this)" class="cell">M</button>
+                    </div>
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">R</button>
+                        <button onclick="showCellContent(this)" class="cell">E</button>
+                        <button onclick="showCellContent(this)" class="cell">D</button>
+                        <button onclick="showCellContent(this)" class="cell">C</button>
+                        <button onclick="showCellContent(this)" class="cell">L</button>
+                    </div>
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">S</button>
+                        <button onclick="showCellContent(this)" class="cell">F</button>
+                        <button onclick="showCellContent(this)" class="cell">A</button>
+                        <button onclick="showCellContent(this)" class="cell">B</button>
+                        <button onclick="showCellContent(this)" class="cell">K</button>
+                    </div>
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">T</button>
+                        <button onclick="showCellContent(this)" class="cell">G</button>
+                        <button onclick="showCellContent(this)" class="cell">H</button>
+                        <button onclick="showCellContent(this)" class="cell">I</button>
+                        <button onclick="showCellContent(this)" class="cell">J</button>
+                    </div>
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">U</button>
+                        <button onclick="showCellContent(this)" class="cell">V</button>
+                        <button onclick="showCellContent(this)" class="cell">W</button>
+                        <button onclick="showCellContent(this)" class="cell">X</button>
+                        <button onclick="showCellContent(this)" class="cell">Y</button>
+                    </div>
+                    <!-- 任務詳細內容顯示區域 -->
+                </div>
+            </section>
+
+            <section id="master">
+                <!-- 宗師組的任務列表 -->
+                <h2>宗師組任務</h2>
+                <div class="bingo-board">
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">Q</button>
+                        <button onclick="showCellContent(this)" class="cell">P</button>
+                        <button onclick="showCellContent(this)" class="cell">O</button>
+                        <button onclick="showCellContent(this)" class="cell">N</button>
+                        <button onclick="showCellContent(this)" class="cell">M</button>
+                    </div>
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">R</button>
+                        <button onclick="showCellContent(this)" class="cell">E</button>
+                        <button onclick="showCellContent(this)" class="cell">D</button>
+                        <button onclick="showCellContent(this)" class="cell">C</button>
+                        <button onclick="showCellContent(this)" class="cell">L</button>
+                    </div>
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">S</button>
+                        <button onclick="showCellContent(this)" class="cell">F</button>
+                        <button onclick="showCellContent(this)" class="cell">A</button>
+                        <button onclick="showCellContent(this)" class="cell">B</button>
+                        <button onclick="showCellContent(this)" class="cell">K</button>
+                    </div>
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">T</button>
+                        <button onclick="showCellContent(this)" class="cell">G</button>
+                        <button onclick="showCellContent(this)" class="cell">H</button>
+                        <button onclick="showCellContent(this)" class="cell">I</button>
+                        <button onclick="showCellContent(this)" class="cell">J</button>
+                    </div>
+                    <div class="row">
+                        <button onclick="showCellContent(this)" class="cell">U</button>
+                        <button onclick="showCellContent(this)" class="cell">V</button>
+                        <button onclick="showCellContent(this)" class="cell">W</button>
+                        <button onclick="showCellContent(this)" class="cell">X</button>
+                        <button onclick="showCellContent(this)" class="cell">Y</button>
+                    </div>
+                    <!-- 任務詳細內容顯示區域 -->
+                </div>
+            </section>
+            <div class="row">
+                <div class="task-details">
+                    <div id="task-title"></div>
+                    <iframe id="cellContentFrame"></iframe>
+                    <div id="task-complete"></div>
+                    <iframe id="completeFrame"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- 頁尾資訊或連結等 -->
+        <p>&copy; 2023 遊戲活動網頁. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- 引入JavaScript腳本 -->
+</body>
+
+</html>
